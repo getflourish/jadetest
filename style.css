@@ -1,0 +1,134 @@
+/**
+ * Typography settings
+ * Based on https://github.com/meodai/bonescss
+ */
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .cards * {
+    width: auto;
+    flex: none; }
+  .cards * {
+    margin-right: 1rem; }
+  .cards * {
+    margin-bottom: 1rem; }
+
+.card {
+  background: #fafafa;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 20rem; }
+  .card * {
+    width: auto;
+    flex: none; }
+
+.card .title {
+  font-family: "Avenir Next", "Helvetica  Neue", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600; }
+
+.card .subtitle {
+  font-family: "Avenir Next", "Helvetica  Neue", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600; }
+
+.card .content {
+  font-family: "Avenir Next", "Helvetica  Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 400; }
+
+.card .content .button {
+  align-self: flex-end;
+  margin-top: 1rem; }
+
+.card .hero {
+  flex: 1; }
+
+.sidebar .splitview {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start; }
+
+.splitview .item {
+  padding: 1rem;
+  border-radius: 10px;
+  background: green; }
+
+.splitview .item:hover {
+  background: red; }
+
+.splitview .item:first-child {
+  border-radius: 10px 0 0 10px; }
+
+.splitview .item:last-child {
+  border-radius: 0 10px 10px 0; }
+
+* {
+  -webkit-box-sizing: border-box; }
+
+html {
+  font-size: 1rem; }
+
+strong {
+  font-weight: bold; }
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  background: black;
+  color: white;
+  padding: 1rem 2rem; }
+  .sidebar * {
+    width: auto;
+    flex: none; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem; }
+  .main * {
+    margin-right: 1rem; }
+
+.main > .title {
+  font-family: "Avenir Next", "Helvetica  Neue", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 3rem; }
+
+.app {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  min-height: 100vh;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default; }
+
+.navigation .item {
+  font-family: "Avenir Next", "Helvetica  Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem; }
+
+.button {
+  padding: 0.5rem;
+  width: auto;
+  border: 2px solid black;
+  border-radius: 2px;
+  font-family: "Avenir Next", "Helvetica  Neue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.button:hover {
+  background: black;
+  color: white; }

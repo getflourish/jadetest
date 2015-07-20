@@ -1,0 +1,11 @@
+{
+  "name": "bitchin-express-app",
+  "description": "My Bitchin' Express App",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "dependencies": {
+    "jade": "*"
+  }
+}

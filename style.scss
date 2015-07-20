@@ -1,0 +1,77 @@
+// Namespacing
+// com.getflourish.someapp
+
+@import '_variables';
+@import 'mixins/_cssify-map.scss';
+@import '_layout';
+@import '_typography';
+@import 'modules/_card';
+@import 'modules/_segmented-control';
+
+
+* {
+    -webkit-box-sizing: border-box;
+}
+
+html {
+  font-size: $base;
+}
+
+
+strong {
+  font-weight: bold;
+}
+
+
+.sidebar {
+  @include Layout(Vertical);
+  @include Flexibility(None);
+  align-self: stretch;
+  background: black;
+  color: white;
+  padding: $single $double;
+}
+.main {
+  @include Layout(Vertical);
+  @include Spacing(Single);
+  padding: $double;
+}
+.main > .title {
+  @include TextStyle("Page Title");
+  margin-bottom: $tripple;
+}
+
+
+.app {
+  @include Layout(Horizontal);
+  min-height: 100vh;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.navigation .item {
+  @include TextStyle("Body");
+  margin-bottom: $single;
+}
+
+.button {
+  // Layout
+  padding: $half;
+  width: auto;
+
+  // Style
+  border: 2px solid black;
+  border-radius: 2px;
+
+  @include TextStyle("Caption");
+}
+
+.button:hover {
+  background: black;
+  color: white;
+}

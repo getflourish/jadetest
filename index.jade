@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    title Jade Test
+    style
+        include style.css
+  body
+
+    mixin button(label)
+      .button= label
+
+    mixin card(title, subtitle, content)
+      .card
+        .hero
+          .title= title
+          .subtitle= subtitle
+        .content!= content
+        +button('Play')
+
+    mixin sidebar()
+      .sidebar
+        .navigation
+            .item Home
+            .item Profile
+            .item Contract
+        .splitview
+            .item foo
+            .item bar
+
+    .app
+        +sidebar
+        .main
+            .title Some title
+            .cards
+                +card('James Blake', 'What a song', ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit id libero nisi iure cum nulla quis dolor, inventore veniam <strong>maiores</strong> molestias suscipit consectetur iste quidem, unde vel corrupti! Distinctio, fuga.')
+                +card('Peter Fox', 'Stadtaffe')
+                +card('Burial', 'Night Walk with a longer title')
+                +card('James Blake', 'What a song')
+                +card('Peter Fox', 'Stadtaffe')
+                +card('Burial', 'Night Walk with a longer title')

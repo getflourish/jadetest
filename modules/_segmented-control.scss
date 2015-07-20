@@ -1,0 +1,21 @@
+.sidebar .splitview {
+  @include Layout(Horizontal);
+}
+
+.splitview .item {
+  padding: $single;
+  border-radius: 10px;
+  background: green;
+}
+
+.splitview .item:hover {
+  background: red;
+}
+
+.splitview .item:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.splitview .item:last-child {
+    border-radius: 0 10px 10px 0;
+}

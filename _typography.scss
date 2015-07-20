@@ -1,0 +1,58 @@
+/**
+ * Typography settings
+ * Based on https://github.com/meodai/bonescss
+ */
+
+$t-light   : 300;
+$t-regular : 400;
+$t-bold    : 600;
+
+$t-default-font-size   : $base;
+$t-default-font-family : "Avenir Next", "Helvetica  Neue", sans-serif;
+$t-default-font-weight : $t-regular;
+$t-default-font-style  : normal;
+$t-default-line-height : 1.5;
+
+$types: (
+  default: (
+    font-size       : 1rem,
+    font-family     : $t-default-font-family,
+    font-weight     : $t-regular,
+    font-style      : normal,
+    line-height     : 1.375
+  ),
+  "Page Title": (
+    font-family     : $t-default-font-family,
+    font-size       : 4rem,
+    font-weight     : $t-bold
+  ),
+  "Subtitle": (
+    font-family     : $t-default-font-family,
+    font-size       : 1.75rem,
+    font-weight     : $t-bold
+  ),
+  "Heading": (
+    font-family     : $t-default-font-family,
+    font-size       : 1.2rem,
+    font-weight     : $t-bold
+  ),
+  "Body": (
+    font-family     : $t-default-font-family,
+    font-size       : 1rem,
+    font-weight     : $t-regular
+  ),
+  "Caption": (
+    font-family     : $t-default-font-family,
+    text-align      : center,
+    text-transform  : uppercase,
+    font-weight     : $t-bold
+  )
+) !default;
+
+@mixin TextStyle($name: default) {
+  @if map-has-key($types, $name) {
+    @include cssify-map(map-get($types, $name));
+  } @else {
+    @warn 'no type named `#{$types}` in $types';
+  }
+}

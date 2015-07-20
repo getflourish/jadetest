@@ -1,0 +1,39 @@
+.cards {
+  @include Layout(Horizontal Wrap);
+  @include Flexibility(None);
+  @include Spacing(Single);
+  * {
+    margin-bottom: $single;
+  }
+}
+
+.card {
+    background: $color-paper;
+    padding: $single;
+    @include Layout(Vertical);
+    @include Flexibility(None);
+    justify-content: stretch;
+    align-items: stretch;
+    width: 20rem;
+}
+
+.card .title {
+  @include TextStyle("Heading");
+}
+
+.card .subtitle {
+  @include TextStyle("Subtitle");
+}
+
+.card .content {
+  @include TextStyle("Body");
+}
+
+.card .content .button {
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+.card .hero {
+   flex: 1;
+}

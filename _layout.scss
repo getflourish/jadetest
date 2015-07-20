@@ -1,0 +1,42 @@
+@mixin Layout($type) {
+  display: flex;
+  // Horizontal layout
+  @if $type == Horizontal {
+    flex-direction: row;
+    align-self: flex-start;
+  } @elseif $type == Vertical {
+    flex-direction: column;
+  } @elseif $type == Horizontal Wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+  } @elseif $type == Vertical Stretch {
+    flex-direction: column;
+    * {
+      flex: 1;
+      background: red;
+    }
+  }
+}
+
+@mixin Flexibility($type) {
+  @if $type == Stretch {
+    * {
+      width: 100%;
+      flex: 1;
+    }
+  } @elseif $type == None {
+    * {
+      width: auto;
+      flex: none;
+    }
+  }
+}
+
+
+@mixin Spacing ($type) {
+  @if $type == Single {
+    * {
+      margin-right: $single;
+    }
+  }
+}
